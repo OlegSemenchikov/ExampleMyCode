@@ -1,0 +1,21 @@
+//Переменные для header
+$header_color-white: #ffffff;
+$header_color-gray: #778599;
+$header_color-blue: #1359bb;
+$header_color-blue-hover: #347bdf;
+$header_color-dark: #434445;
+$header_color-black: #000000;
+
+//Переменные для section
+$section_color-white: #ffffff;
+$section_color-dark: #434445;
+
+//Переменные для burger-menu
+$burger-icon: 12px;
+$burger--width-line: 20px;
+$burger--height-line: 2px;
+$burger--transition-time: 0.4s;
+$burger--rotation: 45deg;
+$burger--translateY: ($burger-icon / 2);
+$burger--translateX: 0;
+$burger-border_color: #d9e6f8;

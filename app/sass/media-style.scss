@@ -1,0 +1,185 @@
+@import "variables";
+
+//Стили для устройств с разрешением меньше 1250 рх
+@media screen and (max-width: 1250px) {
+  //Центрующий контейнер для всех блоков
+  .box-general{
+    width: 95%;
+  }
+}
+
+//Стили для устройств с разрешением меньше 1000 рх
+@media screen and (max-width: 1000px) {
+  //Меняем высоту страницы
+  .body_height{
+    height: 1100px;
+  }
+
+  //Центрующий контейнер для всех блоков
+  .box-general{
+    width: 90%;
+  }
+
+  //Стили для логотипа
+  .container-logo{
+    height: 90px;
+    &__img{
+      width: 180px;
+      height: 25px;
+    }
+    &__separator{
+      display: none;
+    }
+    &__comment{
+      display: none;
+    }
+  }
+
+  //Стили для блока с номером телефона
+  .container-phone{
+    margin-right: 0;
+    &__number{
+      font-size: 16px;
+    }
+  }
+
+  //Стили для меню (с синим фоном)
+  .menu{
+    &__item{
+      &-shadow {
+        width: 105px;
+      }
+      &-shadowing {
+        width: 105px;
+      }
+    }
+    &__text {
+      font-size: 13px;
+    }
+    &-drop{
+      width: 210px;
+      height: 120px;
+      &__item {
+        height: 40px;
+        margin: 0 20px;
+      }
+      &__text{
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+//Стили для устройств с разрешением меньше 768 рх
+@media screen and (max-width: 768px) {
+//Меняем высоту страницы
+.body_height{
+  height: 700px; ;
+}
+
+//Стили для header
+.header {
+  max-width: 768px;
+}
+  //Стили для логотипа
+  .container-logo{
+    height: 80px;
+  }
+
+//Стили для блока с номером телефона
+.container-phone{
+  margin-right: 0;
+  &__number{
+    display: none;
+  }
+  &__social{
+    display: none;
+  }
+  &__icon{
+    margin-right: 0;
+  }
+}
+//Стили для основного меню (с синим фоном)
+.menu {
+  &-wrapper {
+    display: none;
+  }
+}
+
+//Стили для меню (для мобильных устройств)
+.burger {
+  &-icon {
+    display: initial;
+  }
+  &-menu{
+    &_visible {
+      display: initial;
+    }
+    &-drop__text_visible{
+      display: inline-block;
+    }
+  }
+}
+
+//Стили для блока со списком разделов сайта
+.container-list{
+  max-width: 768px;
+  height: 200px;
+  &__shadow {
+    top: 70px;
+    width: 360px;
+    height: 195px;
+  }
+  &__title{
+    font-size: 40px;
+    line-height: 45px;
+  }
+  &__text{
+    &-list{
+      display: none;
+    }
+    &-services{
+      display: initial;
+    }
+  }
+}
+
+//Стили для блока section
+.section{
+  &-wrapper{
+    max-width: 768px;
+    height: 435px;
+  }
+  &__title{
+    margin-top: 40px;
+    font-size: 25px;
+    line-height: 26px;
+  }
+  &__text{
+    margin-top: 26px;
+  }
+}
+}
+
+
+@media screen and (max-width: 360px) {
+
+  //Стили для header
+  .header {
+    width: 360px;
+  }
+
+  //Центрующий контейнер для всех блоков
+  .box-general{
+    width: 320px;
+  }
+
+  //Стили для логотипа
+  .container-logo{
+    height: 70px;
+    &__img{
+      width: 150px;
+      height: 18px;
+    }
+  }
+}

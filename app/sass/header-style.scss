@@ -1,0 +1,200 @@
+@import "variables";
+
+//Высота страницы для проверки фиксирования основного меню
+.body_height{
+  height: 2000px;
+}
+
+//Стили для header
+.header{
+  max-width: 1920px;
+  background: $header_color-white;
+}
+
+//Центрующий контейнер для всех блоков
+.box-general{
+  width: 1170px;
+  position: relative;
+}
+
+//Стили для логотипа
+.container-logo{
+  height: 100px;
+  &__img{
+    width: 168px;
+    height: 20px;
+  }
+  &__separator{
+    margin: 0 30px;
+    width: 1px;
+    height: 21px;
+    background: $header_color-gray;
+  }
+  &__comment{
+    font-family: LATO-REGULAR, sans-serif;
+    color: $header_color-gray;
+    font-size: 15px;
+  }
+}
+
+//Стили для блока с номером телефона
+.container-phone{
+  margin-right: 60px;
+  &__number{
+    font-family: LATO-BOLD, sans-serif;
+    color: $header_color-dark;
+    font-size: 20px;
+  }
+  &__social{
+    font-family: LATO-REGULAR, sans-serif;
+    color: $header_color-gray;
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 28px;
+  }
+  &__icon{
+    margin-right: 14px;
+  }
+}
+
+//Стили для меню (с синим фоном)
+.menu{
+  &-wrapper{
+    background-color: $header_color-blue;
+    max-width: 1920px;
+    height: 60px;
+    &_fixed{
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 5;
+    }
+  }
+  &__item{
+    height: 60px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    &-shadow {
+      background: $header_color-blue-hover;
+      opacity: 0.0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 180px;
+      height: 60px;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.5;
+      }
+      &:hover+.menu-drop{
+        display: initial;
+      }
+    }
+    &-shadowing {
+      background: $header_color-blue-hover;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 180px;
+      height: 60px;
+      cursor: pointer;
+      display: none;
+    }
+    &-arrow{
+      &:after {
+        content: url("../img/arrow-white.svg");
+        margin-top: -3px;
+        margin-left: 10px;
+      }
+    }
+  }
+  &__text {
+    font-family: OSWALD-REGULAR, sans-serif;;
+    color: $header_color-white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  &-drop{
+    /*Обёртка выпадающего списка нижнего меню*/
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color:  $header_color-white;
+    box-shadow: 0 10px 13px 0 rgba(45, 46, 46, 0.1);
+    width: 300px;
+    height: 158px;
+    z-index: 2;
+    &:hover{
+      display: initial;
+    }
+    &:hover+.menu__item-shadowing{
+      display: initial;
+    }
+    &__item {
+      height: 53px;
+      display: flex;
+      position: relative;
+      box-sizing: border-box;
+      align-items: center;
+      margin: 0 25px;
+      border-bottom: 1px solid $header_color-blue;
+      &:last-child{
+        border: none;
+      }
+    }
+    &__text{
+      font-family: LATO-REGULAR, sans-serif;
+      color: $header_color-blue;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+}
+
+//Стили для блока со списком разделов сайта
+.container-list{
+  background: url(../img/background-img.png) no-repeat;
+  max-width: 1920px;
+  height: 220px;
+  &__title{
+    font-family: OSWALD-REGULAR, sans-serif;
+    color: $header_color-white;
+    font-size: 50px;
+    margin-bottom: 18px;
+    z-index: 1;
+    position: relative;
+  }
+  &__text{
+    font-family: LATO-REGULAR, sans-serif;
+    color: $header_color-white;
+    font-size: 13px;
+    line-height: 24px;
+    z-index: 1;
+    position: relative;
+    &:hover{
+      text-decoration: none;
+    }
+    &-list{
+      display: initial;
+    }
+    &-services{
+      display: none;
+    }
+    &_decoration{
+      text-decoration: none;
+      &:before {
+        content: '/';
+        margin: 0 10px;
+        text-decoration: none;
+        pointer-events: none;
+        cursor: none;
+      }
+    }
+  }
+}
+
+

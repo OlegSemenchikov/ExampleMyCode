@@ -1,0 +1,28 @@
+@import "../../node_modules/reset-css/sass/reset";
+@import "variables";
+@import "header-style";
+@import "support-style";
+@import "section-style";
+@import "burger-menu";
+@import "media-style";
+@font-face {
+  font-family: 'LATO-BOLD';
+  src: url('../fonts/LATO-BOLD_0.TTF');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LATO-REGULAR';
+  src: url('../fonts/LATO-REGULAR_0.TTF');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OSWALD-REGULAR';
+  src: url('../fonts/OSWALD-REGULAR.TTF');
+  font-weight: 400;
+  font-style: normal;
+}
+
